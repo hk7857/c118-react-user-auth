@@ -1,12 +1,22 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import '../assets/css/app.css';
-import logo from '../assets/images/logo.svg';
+import { Route } from 'react-router-dom';
+import Nav from './nav';
+import Home from './home';
+import AboutUS from './about_us';
+import SecretDocs from './secret_docs';
+import OperativesList from './operatives_list';
+import auth from '../hoc/auth';
 
 const App = () => (
     <div>
-        <div className="app">
-            <img src={logo} className="logo rotate"/>
-            <h1>Welcome to React</h1>
+        <div className="container">
+            <Nav/>
+
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/about-us" component={AboutUS}/>
+            <Route exact path="/secret-docs" component={auth(SecretDocs)}/>
+            <Route exact path="/operative-list" component={OperativesList}/>
         </div>
     </div>
 );
