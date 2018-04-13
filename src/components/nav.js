@@ -16,7 +16,7 @@ class Nav extends Component {
             color: 'white'
         };
 
-        console.log('Auth: ', this.props.auth)
+        // console.log('Auth: ', this.props.auth)
 
         return(
             <nav className="navbar bg-primary mb-4">
@@ -24,7 +24,8 @@ class Nav extends Component {
                 <Link style={linkStyle} className="nav-link" to="/about-us">About Us</Link>
                 <Link style={linkStyle} className="nav-link" to="/secret-docs">Secret Docs</Link>
                 <Link style={linkStyle} className="nav-link" to="/operative-list">Operatives List</Link>
-                {this.renderButton()}
+                <Link style={linkStyle} className="nav-link" to="/sign-up">Sign Up</Link>
+                <Link style={linkStyle} className="nav-link" to="/sign-in">Sign In</Link>
             </nav>
         )
     }
