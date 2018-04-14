@@ -9,6 +9,7 @@ import OperativesList from './operatives_list';
 import auth from '../hoc/auth';
 import SignUp from './sign_up';
 import SignIn from './sign_in';
+import Quotes from './quotes';
 
 const App = () => (
     <div>
@@ -21,6 +22,7 @@ const App = () => (
             <Route exact path="/operative-list" component={OperativesList}/>
             <Route path="/sign-up" component={SignUp}/>
             <Route path="/sign-in" component={SignIn}/>
+            <Route path="/movie-quote" component={auth(Quotes)}/>
         </div>
     </div>
 );
